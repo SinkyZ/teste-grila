@@ -10,6 +10,8 @@ module com.snk.testegrila {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.sql;
+    requires FXRouter;
+    requires mysql.connector.java;
 
     opens com.snk.testegrila to javafx.fxml;
     exports com.snk.testegrila;

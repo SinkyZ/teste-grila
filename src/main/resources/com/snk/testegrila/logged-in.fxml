@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.snk.testegrila.LoggedInControler">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="293.0" style="-fx-background-color: #1AA7EC;" />
+      <AnchorPane prefHeight="600.0" prefWidth="705.0">
+         <children>
+            <Button fx:id="button_history" layoutX="100.0" layoutY="304.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#enterHistory" prefHeight="30.0" prefWidth="63.0" text="SELECT" textAlignment="CENTER" />
+            <ImageView fitHeight="160.0" fitWidth="144.0" layoutX="60.0" layoutY="174.0">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/History-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_geography" layoutX="439.0" layoutY="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#enterGeography" prefHeight="30.0" prefWidth="63.0" text="SELECT" />
+            <ImageView fitHeight="130.0" fitWidth="136.0" layoutX="407.0" layoutY="189.0">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/geography-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="145.0" fitWidth="164.0" layoutX="50.0" layoutY="392.0">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/soccer-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="145.0" fitWidth="164.0" layoutX="396.0" layoutY="392.0">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/tennis-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="button_football" layoutX="100.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#enterFootball" prefHeight="30.0" prefWidth="63.0" text="SELECT" textAlignment="CENTER" />
+            <Button fx:id="button_tennis" layoutX="447.0" layoutY="537.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#enterTennis" prefHeight="30.0" prefWidth="63.0" text="SELECT" textAlignment="CENTER" />
+            <HBox prefHeight="100.0" prefWidth="697.0" style="-fx-background-color: #0492C2;">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="434.0" text="Welcome to the Quiz-Game!" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ChoiceBox fx:id="myChoiceBox" layoutX="265.0" layoutY="115.0" prefHeight="21.0" prefWidth="131.0" />
+            <Label fx:id="myLabel" layoutX="287.0" layoutY="140.0" prefHeight="17.0" prefWidth="87.0" text="Select Dificulty" textAlignment="CENTER" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
