@@ -8,6 +8,10 @@ import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
 
+/**
+ * Controler-ul scenei de inregistrare in aplicatie/baza de date.
+ */
+
 public class RegisterController {
 
     @FXML
@@ -15,6 +19,10 @@ public class RegisterController {
 
     @FXML
     private PasswordField tf_password;
+
+    /**
+     * Metoda care realizeaza inregistrarea utilizatorului in baza de date pentru a se putea loga in aplicatie.
+     */
 
     @FXML
     public void register() throws SQLException {

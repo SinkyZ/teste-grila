@@ -27,6 +27,19 @@ public class LoggedInControler implements Initializable {
 
     public static String diff;
 
+    /**
+     * Implementam interfata "Initalize" pentru a avea acces la variabilele create cu tagul @FXML
+     */
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        myChoiceBox.getItems().addAll(difficultyList);
+        myChoiceBox.setOnAction(this::getDifficulty);
+    }
+
+    /**
+     * Metoda pentru a intra in categoria Istorie in functie de dificultatea aleasa in meniu, cu ajutorul choice-box-ului.
+     */
 
     @FXML
     public void enterHistory() throws IOException {
@@ -42,6 +55,9 @@ public class LoggedInControler implements Initializable {
         }
     }
 
+    /**
+     * Metoda pentru a intra in categoria Geografie in functie de dificultatea aleasa in meniu, cu ajutorul choice-box-ului.
+     */
     @FXML
     public void enterGeography() throws IOException {
         if (myChoiceBox.getValue() == null) {
@@ -55,6 +71,10 @@ public class LoggedInControler implements Initializable {
         }
     }
 
+    /**
+     * Metoda pentru a intra in categoria Fotbal in functie de dificultatea aleasa in meniu, cu ajutorul choice-box-ului.
+     */
+
     @FXML
     public void enterFootball() throws IOException {
         if (myChoiceBox.getValue() == null) {
@@ -66,6 +86,10 @@ public class LoggedInControler implements Initializable {
             SwitchScene switchScene = new SwitchScene("questionsFootball.fxml", button_football, 800, 600);
         }
     }
+
+    /**
+     * Metoda pentru a intra in categoria Tenis in functie de dificultatea aleasa in meniu, cu ajutorul choice-box-ului.
+     */
 
     @FXML
     public void enterTennis() throws IOException {
@@ -79,11 +103,9 @@ public class LoggedInControler implements Initializable {
         }
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        myChoiceBox.getItems().addAll(difficultyList);
-        myChoiceBox.setOnAction(this::getDifficulty);
-    }
+    /**
+     * Metoda pentru a scrie in myLabel (Textul care apare sub choice-box) dificultatea aleasa.
+     */
 
     public void getDifficulty(ActionEvent event) {
         String myDifficulty = myChoiceBox.getValue();

@@ -24,6 +24,10 @@ public class QuestionControllerHistory implements Initializable {
     @FXML
     private Label questionLabel, next_Question;
 
+    private int index = 0, counter = 0, score = 0;
+
+    public static int finalScore = 0;
+
     private ProgressTimer progressTimer;
 
     private ProgressTimerMedium progressTimerMedium;
@@ -32,11 +36,13 @@ public class QuestionControllerHistory implements Initializable {
 
     private BigDecimal progress = new BigDecimal(String.format("%.2f", 0.0));
 
-    private int index = 0, counter = 0, score = 0;
+    /**
+     * Implementam interfata "Initalize" pentru a avea acces la variabilele create cu tagul @FXML
+     */
 
-    public static int finalScore = 0;
-
-
+    /**
+     * Verificam dificultatea aleasa si generam in pozitiile corespunzatoare intrebarile si raspunsurile, in functie de dificultate si incepem cronometrarea.
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         myProgressBar.setStyle("-fx-accent: #0ba123;");
@@ -70,7 +76,9 @@ public class QuestionControllerHistory implements Initializable {
         }
     }
 
-
+    /**
+     * Metoda pentru a trece la urmatoarea intrebare din Quiz.
+     */
     public void nextQuestion() {
         if (LoggedInControler.diff == "Easy") {
             index++;
@@ -102,6 +110,12 @@ public class QuestionControllerHistory implements Initializable {
 
     }
 
+    /**
+     * Metode pentru a verifica daca raspunsul de pe butonoanele corespunzatoare este corect si a creste scorul in caz ca este
+     * Toate acestea cat timp nu a expirat timpul.
+     * Sau nu am ramas fara intrebari.
+     */
+
     public void countScoreA() {
         if (timeProgress.getProgress() < 1) {
             if (counter < 10) {
@@ -124,7 +138,7 @@ public class QuestionControllerHistory implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -158,7 +172,7 @@ public class QuestionControllerHistory implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -193,7 +207,7 @@ public class QuestionControllerHistory implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -226,7 +240,7 @@ public class QuestionControllerHistory implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -237,6 +251,9 @@ public class QuestionControllerHistory implements Initializable {
         }
     }
 
+    /**
+     * Metoda pentru a trimite scor-ul final catre urmatoarea scena, unde ne este afisat.
+     */
 
     public void endQuiz() throws IOException {
         if(timeProgress.getProgress() > 1){
@@ -254,7 +271,10 @@ public class QuestionControllerHistory implements Initializable {
         }
     }
 
-
+    /**
+     * Metoda pentru a creste progres bar-ul si tot odata textul
+     * unde ne este afisat numarul de intrebari parcurse
+     */
     public void increaseProgressBar() {
         if (timeProgress.getProgress() < 1) {
             if (progress.doubleValue() < 1) {
@@ -269,6 +289,10 @@ public class QuestionControllerHistory implements Initializable {
             System.out.println(timeProgress.getProgress());
         }
     }
+
+    /**
+     * Metode pentru a incepe timer-ul cu ajutorul thread-urilor, in funcite de dificultate
+     */
 
     public void startProgress() {
         Thread thread = new Thread(progressTimer);
@@ -287,6 +311,5 @@ public class QuestionControllerHistory implements Initializable {
         thread.setDaemon(true);
         thread.start();
     }
-
 
 }

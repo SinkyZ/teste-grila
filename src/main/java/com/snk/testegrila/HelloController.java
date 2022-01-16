@@ -1,6 +1,5 @@
 package com.snk.testegrila;
 
-
 import databases.DatabaseConnection;
 
 import javafx.fxml.FXML;
@@ -11,6 +10,10 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.sql.*;
+
+/**
+ * Acesta este controlerul primei scene, unde se face logarea in aplicatie sau trimiterea catre scena pentru inregistrare.
+ */
 
 public class HelloController {
 
@@ -24,6 +27,10 @@ public class HelloController {
     @FXML
     protected Button button_login, button_signup;
 
+    /**
+     * Metoda pentru logarea in meniul de unde poti selecta Quiz-ul dorit. Se face conexiunea cu baza de date.
+     * Se verifica in baza de date daca username-ul si parola sunt corecte.
+     */
 
     @FXML
     public void loginButton() throws SQLException, IOException {
@@ -40,6 +47,10 @@ public class HelloController {
             alert.show();
         }
     }
+
+    /**
+     * Metoda pentru a merge catre scena de register.
+     */
 
     @FXML
     public void goToRegister() throws SQLException, IOException {

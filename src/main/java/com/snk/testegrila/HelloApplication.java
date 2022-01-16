@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.github.saacsos.FXRouter;
-import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
@@ -15,8 +13,9 @@ public class HelloApplication extends Application {
             Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
             Scene scene = new Scene(root, 800, 600);
 
-            stage.setTitle("SALUT");
+            stage.setTitle("Quiz-game");
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -4,14 +4,16 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2596be;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.snk.testegrila.QuestionControllerFootball">
    <children>
-      <AnchorPane layoutX="50.0" layoutY="36.0" prefHeight="528.0" prefWidth="701.0" style="-fx-background-color: #25a5be;">
+      <AnchorPane layoutX="21.0" layoutY="36.0" prefHeight="528.0" prefWidth="701.0" style="-fx-background-color: #25a5be;">
          <children>
-            <ProgressBar fx:id="myProgressBar" layoutX="-1.0" prefHeight="25.0" prefWidth="701.0" progress="0.0" />
+            <ProgressBar fx:id="myProgressBar" layoutX="30.0" layoutY="2.0" prefHeight="25.0" prefWidth="701.0" progress="0.0" />
             <Label layoutX="255.0" layoutY="31.0" text="Question: " textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="26.0" />
@@ -19,26 +21,46 @@
             </Label>
             <Label fx:id="questionLabel" layoutX="372.0" layoutY="34.0" prefHeight="32.0" prefWidth="110.0" textAlignment="CENTER" textFill="WHITE">
                <font>
-                  <Font size="21.0" />
+                  <Font name="Arial" size="21.0" />
                </font>
             </Label>
             <Label fx:id="next_Question" alignment="CENTER" layoutX="11.0" layoutY="82.0" prefHeight="106.0" prefWidth="678.0" text="Intrebare 1?" textAlignment="CENTER" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Arial" size="24.0" />
                </font>
             </Label>
-            <Button fx:id="aButton" layoutX="205.0" layoutY="201.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreA" prefHeight="38.0" prefWidth="297.0" text="Button" />
-            <Button fx:id="bButton" layoutX="205.0" layoutY="264.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreB" prefHeight="25.0" prefWidth="297.0" text="Button" />
-            <Button fx:id="cButton" layoutX="205.0" layoutY="313.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreC" prefHeight="25.0" prefWidth="297.0" text="Button" />
-            <Button fx:id="dButton" layoutX="205.0" layoutY="356.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreD" prefHeight="25.0" prefWidth="297.0" text="Button" />
-            <Button fx:id="end_game" layoutX="328.0" layoutY="452.0" mnemonicParsing="false" onAction="#endQuiz" prefHeight="25.0" prefWidth="48.0" text="SEND" textAlignment="CENTER" />
+            <Button fx:id="aButton" layoutX="153.0" layoutY="209.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreA" prefHeight="30.0" prefWidth="405.0" text="Button" />
+            <Button fx:id="bButton" layoutX="153.0" layoutY="264.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreB" prefHeight="30.0" prefWidth="405.0" text="Button" />
+            <Button fx:id="cButton" layoutX="153.0" layoutY="315.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreC" prefHeight="30.0" prefWidth="405.0" text="Button" />
+            <Button fx:id="dButton" layoutX="153.0" layoutY="365.0" mnemonicParsing="false" onAction="#increaseProgressBar" onMouseClicked="#countScoreD" prefHeight="30.0" prefWidth="405.0" text="Button" />
+            <Button fx:id="end_game" layoutX="332.0" layoutY="434.0" mnemonicParsing="false" onAction="#endQuiz" prefHeight="25.0" prefWidth="48.0" text="SEND" textAlignment="CENTER" />
             <ProgressIndicator fx:id="timeProgress" layoutX="607.0" layoutY="465.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="61.0" progress="0.0" />
             <Label fx:id="difficulty" layoutX="48.0" layoutY="477.0" textAlignment="CENTER" />
-            <Label layoutX="610.0" layoutY="427.0" text="Time">
+            <Label layoutX="544.0" layoutY="471.0" text="Time:">
                <font>
-                  <Font size="26.0" />
+                  <Font name="Arial" size="25.0" />
                </font>
             </Label>
+            <ImageView fitHeight="127.0" fitWidth="117.0" layoutX="-20.0" layoutY="146.0" rotate="41.6">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/Tennis-iconQ.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="127.0" fitWidth="101.0" layoutX="7.0" layoutY="383.0" rotate="28.1">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/File-History-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="149.0" fitWidth="136.0" layoutX="622.0" layoutY="321.0" rotate="-26.6">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/geography.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="106.0" fitWidth="103.0" layoutX="630.0" layoutY="183.0" rotate="-21.3">
+               <image>
+                  <Image url="file:/C:/Users/godsi/IdeaProjects/Teste_Grila/teste-grila/src/FIFA-12-icon.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

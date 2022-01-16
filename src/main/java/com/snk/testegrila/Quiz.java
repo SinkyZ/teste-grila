@@ -2,6 +2,10 @@ package com.snk.testegrila;
 
 public class Quiz {
 
+    /**
+     * Aici ne sunt retinute intrebarile, optiunile si raspunsurile Quiz-urilor de Istorie in functie de dificultate.
+     */
+
     public static String[] questions = {
             "Which of these locations was never under Ottoman rule?",
             "World War I began in which year?",

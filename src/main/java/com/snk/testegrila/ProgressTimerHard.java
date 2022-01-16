@@ -11,6 +11,14 @@ public class ProgressTimerHard implements Runnable {
         this.progressIndicatorHard = progressIndicatorHard;
     }
 
+    /**
+     * Este implementata interfata Runnable deoarece obiectele sunt executate de catre un Thread.
+     */
+
+    /**
+     * Metoda pentru ca ProgressIndicator ul nostru folosit pentru a face testarea contra-timp sa ruleze continuu.
+     * Acesta este timer-ul pentru intrebarile de dificultate "Hard"
+     */
 
     @Override
     public void run() {

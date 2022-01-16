@@ -124,7 +124,7 @@ public class QuestionControllerFootball implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -158,7 +158,7 @@ public class QuestionControllerFootball implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -193,7 +193,7 @@ public class QuestionControllerFootball implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
@@ -226,7 +226,7 @@ public class QuestionControllerFootball implements Initializable {
                     nextQuestion();
                 } catch (ArrayIndexOutOfBoundsException e) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("BRAVO");
+                    alert.setContentText("Congratulations! Please sumbit your result!");
                     alert.show();
                 }
             }
